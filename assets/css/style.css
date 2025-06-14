@@ -1,260 +1,452 @@
 /* GENERAL */
-
 :root {
-  --violet-color: violet;
-  --blue-color: #0ff;
+  /* Selettore per la root del documento HTML, definisce le variabili CSS globali */
+  --violet-color: violet; /* Definisce una variabile CSS per il colore violetto */
+  --blue-color: #0ff; /* Definisce una variabile CSS per il colore ciano */
 }
 body {
-  margin: 0;
-  background-color: rgb(200, 200, 200);
-  min-height: 100vh;
-  font-family: "Quicksand", sans-serif; /* font */
-  display: flex; /* Attiva Flexbox */
-  flex-direction: column; /* Organizza gli elementi in colonna */
+  /* Selettore per l'elemento body del documento HTML */
+  margin: 0; /* Rimuove il margine esterno predefinito dal body */
+  background-color: rgb(
+    200,
+    200,
+    200
+  ); /* Imposta il colore di sfondo del body */
+  min-height: 100vh; /* Imposta l'altezza minima del body al 100% dell'altezza della viewport */
+  font-family: "Quicksand", sans-serif; /* Imposta il font principale per il testo */
+  display: flex; /* Imposta il display del body come flex container */
+  flex-direction: column; /* Organizza gli elementi flex in colonna */
 }
 main {
-  flex-grow: 1; /* Permette al main di occupare tutto lo spazio disponibile */
+  /* Selettore per l'elemento main */
+  flex-grow: 1; /* Permette all'elemento main di espandersi per occupare lo spazio disponibile */
 }
 header {
-  text-align: center; /* Centra il testo all'interno dell'header */
-  padding-top: 20px; /* Aggiunge spazio sopra il titolo */
+  /* Selettore per l'elemento header */
+  text-align: center; /* Allinea il testo al centro all'interno dell'header */
+  padding-top: 20px; /* Aggiunge un padding superiore di 20px all'header */
 }
-/* BOUNCING ANIMATION */
+/* BOUNCING TITLE */
 .bouncing {
-  margin-bottom: 25px;
-  width: 100%; /* Assicura che occupi la larghezza */
+  /* Selettore per la classe .bouncing */
+  margin-bottom: 25px; /* Aggiunge un margine inferiore di 25px */
+  width: 100%; /* Imposta la larghezza al 100% */
 }
 .bouncing h1 {
-  font-size: 3rem;
-  text-align: center;
-  perspective: 500px;
-  text-shadow: 0 5px 5px rgba(0, 0, 0, 1);
+  /* Selettore per l'elemento h1 all'interno di .bouncing */
+  font-size: 3rem; /* Imposta la dimensione del font a 3rem */
+  text-align: center; /* Allinea il testo al centro */
+  perspective: 500px; /* Applica una prospettiva per effetti 3D */
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 1); /* Aggiunge un'ombra al testo */
 }
 span {
-  color: rgb(58, 58, 58);
-  font-size: 3rem;
-  position: relative;
-  display: inline-block;
+  /* Selettore per l'elemento span */
+  color: rgb(58, 58, 58); /* Imposta il colore del testo */
+  font-size: 3rem; /* Imposta la dimensione del font a 3rem */
+  position: relative; /* Imposta il posizionamento relativo */
+  display: inline-block; /* Imposta il display come blocco in linea */
   animation: bounce 1s ease infinite alternate,
-    shadow-pulse 1s ease infinite alternate;
-  margin-bottom: 30px;
-  font-weight: normal;
+    /* Applica due animazioni: "bounce" e "shadow-pulse" */ shadow-pulse 1s ease
+      infinite alternate;
+  margin-bottom: 30px; /* Aggiunge un margine inferiore di 30px */
+  font-weight: normal; /* Imposta il peso del font a normale */
 }
 h1 span:nth-child(2) {
-  animation-delay: 0.1s;
+  /* Selettore per il secondo span all'interno di un h1 */
+  animation-delay: 0.1s; /* Ritarda l'animazione di 0.1 secondi */
 }
 h1 span:nth-child(3) {
-  animation-delay: 0.2s;
+  /* Selettore per il terzo span all'interno di un h1 */
+  animation-delay: 0.2s; /* Ritarda l'animazione di 0.2 secondi */
 }
 h1 span:nth-child(4) {
-  animation-delay: 0.3s;
+  /* Selettore per il quarto span all'interno di un h1 */
+  animation-delay: 0.3s; /* Ritarda l'animazione di 0.3 secondi */
 }
 h1 span:nth-child(5) {
-  animation-delay: 0.4s;
+  /* Selettore per il quinto span all'interno di un h1 */
+  animation-delay: 0.4s; /* Ritarda l'animazione di 0.4 secondi */
 }
 h1 span:nth-child(6) {
-  animation-delay: 0.5s;
+  /* Selettore per il sesto span all'interno di un h1 */
+  animation-delay: 0.5s; /* Ritarda l'animazione di 0.5 secondi */
 }
 h1 span:nth-child(7) {
-  animation-delay: 0.6s;
+  /* Selettore per il settimo span all'interno di un h1 */
+  animation-delay: 0.6s; /* Ritarda l'animazione di 0.6 secondi */
 }
 h1 span:nth-child(8) {
-  animation-delay: 0.7s;
+  /* Selettore per l'ottavo span all'interno di un h1 */
+  animation-delay: 0.7s; /* Ritarda l'animazione di 0.7 secondi */
 }
 h1 span:nth-child(9) {
-  animation-delay: 0.8s;
+  /* Selettore per il nono span all'interno di un h1 */
+  animation-delay: 0.8s; /* Ritarda l'animazione di 0.8 secondi */
 }
 h1 span:nth-child(10) {
-  animation-delay: 0.9s;
+  /* Selettore per il decimo span all'interno di un h1 */
+  animation-delay: 0.9s; /* Ritarda l'animazione di 0.9 secondi */
 }
 h1 span:nth-child(11) {
-  animation-delay: 1s;
+  /* Selettore per l'undicesimo span all'interno di un h1 */
+  animation-delay: 1s; /* Ritarda l'animazione di 1 secondo */
 }
 h1 span:nth-child(12) {
-  animation-delay: 1.1s;
+  /* Selettore per il dodicesimo span all'interno di un h1 */
+  animation-delay: 1.1s; /* Ritarda l'animazione di 1.1 secondi */
 }
 h1 span:nth-child(13) {
-  animation-delay: 1.2s;
+  /* Selettore per il tredicesimo span all'interno di un h1 */
+  animation-delay: 1.2s; /* Ritarda l'animazione di 1.2 secondi */
 }
 h1 span:nth-child(14) {
-  animation-delay: 1.3s;
+  /* Selettore per il quattordicesimo span all'interno di un h1 */
+  animation-delay: 1.3s; /* Ritarda l'animazione di 1.3 secondi */
 }
 h1 span:nth-child(15) {
-  animation-delay: 1.4s;
+  /* Selettore per il quindicesimo span all'interno di un h1 */
+  animation-delay: 1.4s; /* Ritarda l'animazione di 1.4 secondi */
 }
 h1 span:nth-child(16) {
-  animation-delay: 1.5s;
+  /* Selettore per il sedicesimo span all'interno di un h1 */
+  animation-delay: 1.5s; /* Ritarda l'animazione di 1.5 secondi */
 }
 h1 span:nth-child(17) {
-  animation-delay: 1.6s;
+  /* Selettore per il diciassettesimo span all'interno di un h1 */
+  animation-delay: 1.6s; /* Ritarda l'animazione di 1.6 secondi */
 }
 h1 span:nth-child(18) {
-  animation-delay: 1.7s;
+  /* Selettore per il diciottesimo span all'interno di un h1 */
+  animation-delay: 1.7s; /* Ritarda l'animazione di 1.7 secondi */
 }
 h1 span:nth-child(19) {
-  animation-delay: 1.8s;
+  /* Selettore per il diciannovesimo span all'interno di un h1 */
+  animation-delay: 1.8s; /* Ritarda l'animazione di 1.8 secondi */
 }
 @keyframes bounce {
+  /* Definizione dell'animazione "bounce" */
   0% {
-    top: 20px;
+    /* Stato iniziale dell'animazione */
+    top: 20px; /* Posizione iniziale dall'alto */
   }
   100% {
-    top: -20px;
+    /* Stato finale dell'animazione */
+    top: -20px; /* Posizione finale dall'alto */
   }
 }
 @keyframes shadow-pulse {
+  /* Definizione dell'animazione "shadow-pulse" */
   0% {
-    /* Quando la lettera è in basso, l'ombra è più grande e visibile */
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Stato iniziale dell'animazione */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Ombra del testo iniziale */
   }
   100% {
-    /* Quando la lettera è in alto, l'ombra è più piccola e sfuocata */
-    text-shadow: 0 10px 15px rgba(0, 0, 0, 1);
+    /* Stato finale dell'animazione */
+    text-shadow: 0 10px 15px rgba(0, 0, 0, 1); /* Ombra del testo finale */
   }
 }
-
 /* ORB SECTION */
 .orb-section {
-  border-top: solid 2px rgb(58, 58, 58);
-  border-bottom: solid 2px rgb(58, 58, 58);
-  padding-bottom: 10em;
-  width: 100%;
-  box-sizing: border-box;
+  /* Selettore per la classe .orb-section */
+  border-top: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo superiore solido */
+  border-bottom: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo inferiore solido */
+  padding-bottom: 10em; /* Aggiunge un padding inferiore di 10em */
+  width: 100%; /* Imposta la larghezza al 100% */
+  box-sizing: border-box; /* Include padding e bordo nella larghezza e altezza totali */
 }
 .orb-section h2 {
-  color: rgb(58, 58, 58);
-  margin-left: 5rem;
-  font-size: 3rem;
-  font-weight: normal;
+  /* Selettore per l'elemento h2 all'interno di .orb-section */
+  color: rgb(58, 58, 58); /* Imposta il colore del testo */
+  margin-left: 5rem; /* Aggiunge un margine sinistro di 5rem */
+  font-size: 3rem; /* Imposta la dimensione del font a 3rem */
+  font-weight: normal; /* Imposta il peso del font a normale */
 }
 .orb {
+  /* Selettore per la classe .orb */
   animation: vertical-movement 2s ease-in-out infinite alternate,
-    spin 4s linear infinite;
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  margin-top: 100px;
-  border-radius: 50%;
-  position: relative;
+    /* Applica due animazioni: "vertical-movement" e "spin" */ spin 4s linear
+      infinite;
+  width: 200px; /* Imposta la larghezza a 200px */
+  height: 200px; /* Imposta l'altezza a 200px */
+  margin: auto; /* Centra l'elemento orizzontalmente */
+  margin-top: 100px; /* Aggiunge un margine superiore di 100px */
+  border-radius: 50%; /* Rende l'elemento circolare */
+  position: relative; /* Imposta il posizionamento relativo */
   box-shadow: inset 0 0 50px white, inset 20px 0 60px var(--violet-color),
-    inset -20px 0 60px var(--blue-color), inset 20px 0 300px var(--violet-color),
+    /* Applica molteplici ombre interne ed esterne */ inset -20px 0 60px var(--blue-color),
+    inset 20px 0 300px var(--violet-color),
     inset -20px 0 300px var(--blue-color), 0 0 50px white,
     -10px 0 60px var(--violet-color), 10px 0 60px var(--blue-color);
 }
 @keyframes vertical-movement {
+  /* Definizione dell'animazione "vertical-movement" */
   0% {
-    top: 20px;
+    /* Stato iniziale dell'animazione */
+    top: 20px; /* Posizione iniziale dall'alto */
   }
   50% {
-    top: 50px;
+    /* Stato intermedio dell'animazione */
+    top: 50px; /* Posizione intermedia dall'alto */
   }
   100% {
-    top: 20px;
+    /* Stato finale dell'animazione */
+    top: 20px; /* Posizione finale dall'alto */
   }
 }
 @keyframes spin {
+  /* Definizione dell'animazione "spin" */
   from {
-    transform: rotate(0deg);
+    /* Stato iniziale dell'animazione */
+    transform: rotate(0deg); /* Rotazione iniziale di 0 gradi */
   }
   to {
-    transform: rotate(360deg);
+    /* Stato finale dell'animazione */
+    transform: rotate(360deg); /* Rotazione finale di 360 gradi */
   }
 }
-
 /* LOOP SECTION */
 .loop-section {
-  border-bottom: solid 2px rgb(58, 58, 58);
-  padding-bottom: 10em;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex; /* Aggiungi flexbox per centrare */
-  flex-direction: column; /* Organizza gli elementi in colonna */
-  align-items: center; /* Centra orizzontalmente gli elementi figli */
+  /* Selettore per la classe .loop-section */
+  border-bottom: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo inferiore solido */
+  padding-bottom: 10em; /* Aggiunge un padding inferiore di 10em */
+  width: 100%; /* Imposta la larghezza al 100% */
+  box-sizing: border-box; /* Include padding e bordo nella larghezza e altezza totali */
+  display: flex; /* Imposta il display come flex container */
+  flex-direction: column; /* Organizza gli elementi flex in colonna */
+  align-items: center; /* Centra gli elementi lungo l'asse trasversale */
 }
 .loop-section h2 {
-  color: rgb(58, 58, 58);
-  margin-left: 5rem;
-  font-size: 3rem;
-  font-weight: normal;
-  align-self: flex-start; /* Allinea il titolo a sinistra all'interno del flex container */
+  /* Selettore per l'elemento h2 all'interno di .loop-section */
+  color: rgb(58, 58, 58); /* Imposta il colore del testo */
+  margin-left: 5rem; /* Aggiunge un margine sinistro di 5rem */
+  font-size: 3rem; /* Imposta la dimensione del font a 3rem */
+  font-weight: normal; /* Imposta il peso del font a normale */
+  align-self: flex-start; /* Allinea l'elemento all'inizio dell'asse trasversale */
 }
 .loop {
-  display: flex;
-  justify-content: center;
-  transform-style: preserve-3d;
-  width: 200px;
-  height: 200px;
-  animation: spin 8s linear infinite;
-  margin: auto;
+  /* Selettore per la classe .loop */
+  display: flex; /* Imposta il display come flex container */
+  justify-content: center; /* Centra gli elementi lungo l'asse principale */
+  transform-style: preserve-3d; /* Permette agli elementi figli di mantenere la loro trasformazione 3D */
+  width: 200px; /* Imposta la larghezza a 200px */
+  height: 200px; /* Imposta l'altezza a 200px */
+  animation: spin 2s linear infinite; /* Applica l'animazione "spin" */
+  margin: auto; /* Centra l'elemento orizzontalmente */
 }
-.loop::before,
+.loop::before, /* Selettore per lo pseudo-elemento ::before di .loop */
 .loop::after {
-  content: "";
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin: 0 -20px;
+  /* Selettore per lo pseudo-elemento ::after di .loop */
+  content: ""; /* Imposta il contenuto vuoto */
+  width: 80px; /* Imposta la larghezza a 80px */
+  height: 80px; /* Imposta l'altezza a 80px */
+  border-radius: 50%; /* Rende gli pseudo-elementi circolari */
+  margin: 0 -20px; /* Aggiunge un margine orizzontale negativo */
   background: conic-gradient(
-    from 90deg,
+    /* Applica un gradiente conico */ from 90deg,
     var(--blue-color),
     var(--violet-color),
     var(--blue-color)
   );
-  mask: radial-gradient(transparent 26px, black 27px);
-  -webkit-mask: radial-gradient(transparent 26px, black 27px);
-  animation: hueShift 6s linear infinite;
+  mask: radial-gradient(
+    transparent 26px,
+    black 27px
+  ); /* Applica una maschera radiale */
+  -webkit-mask: radial-gradient(
+    transparent 26px,
+    black 27px
+  ); /* Maschera radiale per WebKit */
+  animation: hueShift 6s linear infinite; /* Applica l'animazione "hueShift" */
 }
 .loop::after {
+  /* Selettore specifico per lo pseudo-elemento ::after di .loop */
   background: conic-gradient(
-    from 270deg,
+    /* Applica un gradiente conico diverso */ from 270deg,
     var(--violet-color),
     var(--blue-color),
     var(--violet-color)
   );
-  transform: translateY(1px) rotateX(-1deg);
+  transform: translateY(1px) rotateX(-1deg); /* Applica una traslazione e una rotazione */
 }
 @keyframes spin {
+  /* Definizione dell'animazione "spin" */
   0% {
-    transform: rotateZ(0deg);
+    /* Stato iniziale dell'animazione */
+    transform: rotateZ(0deg); /* Rotazione sull'asse Z di 0 gradi */
   }
   100% {
-    transform: rotateZ(360deg);
+    /* Stato finale dell'animazione */
+    transform: rotateZ(360deg); /* Rotazione sull'asse Z di 360 gradi */
   }
 }
 @keyframes hueShift {
+  /* Definizione dell'animazione "hueShift" */
   0% {
-    transform: hue-rotate(0deg);
+    /* Stato iniziale dell'animazione */
+    transform: hue-rotate(0deg); /* Rotazione della tonalità di 0 gradi */
   }
   100% {
-    transform: hue-rotate(360deg);
+    /* Stato finale dell'animazione */
+    transform: hue-rotate(360deg); /* Rotazione della tonalità di 360 gradi */
   }
 }
-
+/* LOADER SECTION */
+.loader-section {
+  /* Selettore per la classe .loader-section */
+  border-bottom: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo inferiore solido */
+  padding-bottom: 10em; /* Aggiunge un padding inferiore di 10em */
+  width: 100%; /* Imposta la larghezza al 100% */
+  box-sizing: border-box; /* Include padding e bordo nella larghezza e altezza totali */
+  display: flex; /* Imposta il display come flex container */
+  flex-direction: column; /* Organizza gli elementi flex in colonna */
+  align-items: center; /* Centra gli elementi lungo l'asse trasversale */
+}
+.loader-section h2 {
+  /* Selettore per l'elemento h2 all'interno di .loader-section */
+  color: rgb(58, 58, 58); /* Imposta il colore del testo */
+  margin-left: 5rem; /* Aggiunge un margine sinistro di 5rem */
+  font-size: 3rem; /* Imposta la dimensione del font a 3rem */
+  font-weight: normal; /* Imposta il peso del font a normale */
+  align-self: flex-start; /* Allinea l'elemento all'inizio dell'asse trasversale */
+}
+.balls-container {
+  /* Selettore per la classe .balls-container */
+  display: flex; /* Imposta il display come flex container */
+  justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
+  align-items: flex-end; /* Allinea gli elementi al fondo dell'asse trasversale */
+  width: 130px; /* Imposta la larghezza a 130px */
+  height: 90px; /* Imposta l'altezza a 90px */
+  margin-top: 50px; /* Aggiunge un margine superiore di 50px */
+  position: relative; /* Imposta il posizionamento relativo */
+}
+.balls {
+  /* Selettore per la classe .balls */
+  width: 35px; /* Imposta la larghezza a 35px */
+  height: 35px; /* Imposta l'altezza a 35px */
+  box-shadow: inset 0 0 10px white, inset 5px 0 15px var(--violet-color),
+    /* Applica ombre interne ed esterne */ inset -5px 0 15px var(--blue-color),
+    0 0 10px white, -3px 0 15px var(--violet-color),
+    3px 0 15px var(--blue-color);
+  background-color: transparent; /* Imposta il colore di sfondo trasparente */
+  border-radius: 50%; /* Rende l'elemento circolare */
+  transform-origin: 50%; /* Imposta il punto di origine delle trasformazioni al centro */
+  animation: balls-animation 0.5s alternate infinite ease; /* Applica l'animazione "balls-animation" */
+}
+.balls:nth-child(1) {
+  /* Selettore per il primo elemento .balls */
+  animation-delay: 0s; /* Nessun ritardo nell'animazione */
+}
+.balls:nth-child(2) {
+  /* Selettore per il secondo elemento .balls */
+  animation-delay: 0.2s; /* Ritarda l'animazione di 0.2 secondi */
+}
+.balls:nth-child(3) {
+  /* Selettore per il terzo elemento .balls */
+  animation-delay: 0.4s; /* Ritarda l'animazione di 0.4 secondi */
+}
+@keyframes balls-animation {
+  /* Definizione dell'animazione "balls-animation" */
+  0% {
+    /* Stato iniziale dell'animazione */
+    transform: translateY(0) scaleX(1.5); /* Traslazione verticale e scala orizzontale */
+    height: 5px; /* Altezza iniziale */
+    border-radius: 50px 50px 25px 25px; /* Raggio del bordo per creare una forma appiattita */
+  }
+  40% {
+    /* Stato al 40% dell'animazione */
+    transform: translateY(-65px) scaleX(1); /* Traslazione verticale e scala orizzontale */
+    height: 35px; /* Altezza al 40% */
+    border-radius: 50%; /* Raggio del bordo per creare un cerchio perfetto */
+  }
+  100% {
+    /* Stato finale dell'animazione */
+    transform: translateY(-85px); /* Traslazione verticale finale */
+  }
+}
+.shadows-container {
+  /* Selettore per la classe .shadows-container */
+  position: absolute; /* Imposta il posizionamento assoluto */
+  bottom: 3px; /* Posiziona a 3px dal fondo */
+  width: 100%; /* Imposta la larghezza al 100% */
+  display: flex; /* Imposta il display come flex container */
+  justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
+}
+.balls-shadow {
+  /* Selettore per la classe .balls-shadow */
+  width: 35px; /* Imposta la larghezza a 35px */
+  height: 6px; /* Imposta l'altezza a 6px */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Imposta il colore di sfondo con opacità */
+  border-radius: 50%; /* Rende l'elemento circolare */
+  transform-origin: 50%; /* Imposta il punto di origine delle trasformazioni al centro */
+  z-index: -1; /* Imposta l'ordine di sovrapposizione dietro agli altri elementi */
+  filter: blur(0.4px); /* Applica un filtro di sfocatura */
+  animation: shadow-animation 0.5s alternate infinite ease; /* Applica l'animazione "shadow-animation" */
+}
+.shadows-container .balls-shadow:nth-child(1) {
+  /* Selettore per il primo .balls-shadow all'interno di .shadows-container */
+  animation-delay: 0s; /* Nessun ritardo nell'animazione */
+}
+.shadows-container .balls-shadow:nth-child(2) {
+  /* Selettore per il secondo .balls-shadow all'interno di .shadows-container */
+  animation-delay: 0.2s; /* Ritarda l'animazione di 0.2 secondi */
+}
+.shadows-container .balls-shadow:nth-child(3) {
+  /* Selettore per il terzo .balls-shadow all'interno di .shadows-container */
+  animation-delay: 0.4s; /* Ritarda l'animazione di 0.4 secondi */
+}
+@keyframes shadow-animation {
+  /* Definizione dell'animazione "shadow-animation" */
+  0% {
+    /* Stato iniziale dell'animazione */
+    transform: scaleX(1.5); /* Scala orizzontale */
+    opacity: 0.8; /* Opacità iniziale */
+  }
+  40% {
+    /* Stato al 40% dell'animazione */
+    transform: scaleX(1); /* Scala orizzontale */
+    opacity: 0.7; /* Opacità al 40% */
+  }
+  100% {
+    /* Stato finale dell'animazione */
+    transform: scaleX(0.2); /* Scala orizzontale finale */
+    opacity: 0.4; /* Opacità finale */
+  }
+}
 /* FOOTER */
 footer {
-  width: 100%; /* Larghezza del footer */
-  text-align: center; /* Centra il testo del footer */
-  padding: 10px; /* Padding interno per il footer */
-  font-family: "Quicksand", sans-serif; /* Font del footer */
-  font-size: 1rem; /* Dimensione del testo del footer */
-  margin-top: auto; /* Spinge il footer in fondo alla pagina */
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(30px);
-  box-shadow: 0 0 3px black; /* Colore di sfondo del footer */
-  border-top: solid 1px rgba(0, 0, 0, 0.1); /* Bordo superiore per il footer */
-  text-decoration: none; /* Rimuove la sottolineatura dal testo del footer */
+  /* Selettore per l'elemento footer */
+  width: 100%; /* Imposta la larghezza al 100% */
+  text-align: center; /* Allinea il testo al centro */
+  padding: 10px; /* Aggiunge un padding di 10px su tutti i lati */
+  font-family: "Quicksand", sans-serif; /* Imposta il font */
+  font-size: 1rem; /* Imposta la dimensione del font a 1rem */
+  margin-top: auto; /* Spinge il footer verso il basso */
+  background: rgba(255, 255, 255, 0.1); /* Imposta lo sfondo con opacità */
+  backdrop-filter: blur(30px); /* Applica un filtro di sfocatura allo sfondo */
+  box-shadow: 0 0 3px black; /* Aggiunge un'ombra alla scatola */
+  border-top: solid 1px rgba(0, 0, 0, 0.1); /* Aggiunge un bordo superiore solido */
+  text-decoration: none; /* Rimuove la sottolineatura dal testo */
 }
-/* Footer <a/> style */
 footer a {
-  color: rgb(58, 58, 58); /* Colore del link nel footer */
-  text-decoration: none; /* Rimuove la sottolineatura dal link */
+  /* Selettore per gli elementi <a> all'interno del footer */
+  color: rgb(58, 58, 58); /* Imposta il colore del testo */
+  text-decoration: none; /* Rimuove la sottolineatura dal testo */
 }
 footer a:hover {
-  background: linear-gradient(to right, var(--blue-color), var(--violet-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transform: scale(1.5); /* Piccolo ingrandimento al hover */
-  color: var(--blue-color); /* Colore del link attivo nel footer */
-  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-  text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+  /* Selettore per gli elementi <a> al passaggio del mouse */
+  background: linear-gradient(
+    to right,
+    var(--blue-color),
+    var(--violet-color)
+  ); /* Applica un gradiente lineare come sfondo */
+  -webkit-background-clip: text; /* Clipa lo sfondo al testo (per WebKit) */
+  -webkit-text-fill-color: transparent; /* Rende il testo trasparente per mostrare il gradiente (per WebKit) */
+  transform: scale(1.5); /* Ingrandisce il testo al 150% */
+  color: var(--blue-color); /* Imposta il colore del testo */
+  cursor: pointer; /* Cambia il cursore a "pointer" */
+  text-decoration: underline; /* Aggiunge una sottolineatura al testo */
 }
