@@ -145,7 +145,7 @@ h1 span:nth-child(19) {
     text-shadow: 0 10px 15px rgba(0, 0, 0, 1); /* Ombra del testo finale */
   }
 }
-/* ORB SECTION */
+/*ORB SECTION */
 .orb-section {
   /* Selettore per la classe .orb-section */
   border-top: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo superiore solido */
@@ -289,7 +289,7 @@ h1 span:nth-child(19) {
     transform: hue-rotate(360deg); /* Rotazione della tonalità di 360 gradi */
   }
 }
-/* BAALLS LOADER SECTION */
+/* BALLS LOADER SECTION */
 .balls-loader-section {
   /* Selettore per la classe .loader-section */
   border-bottom: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo inferiore solido */
@@ -416,7 +416,7 @@ h1 span:nth-child(19) {
     opacity: 0.4; /* Opacità finale */
   }
 }
-/* BALLS LOADER SECTION */
+/* BOX LOADER SECTION */
 .box-loader-section {
   /* Selettore per la classe .loader-section */
   border-bottom: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo inferiore solido */
@@ -692,7 +692,77 @@ i:nth-child(10) {
     box-shadow: 0px 10px 20px rgba(255, 255, 255, 0); /* Aggiunge un'ombra alla scatola */
   }
 }
-
+/* LOADING WAVE */
+.loading-wave-section {
+  /* Selettore per la classe .loader-section */
+  border-bottom: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo inferiore solido */
+  padding-bottom: 10em; /* Aggiunge un padding inferiore di 10em */
+  width: 100%; /* Imposta la larghezza al 100% */
+  box-sizing: border-box; /* Include padding e bordo nella larghezza e altezza totali */
+  display: flex; /* Imposta il display come flex container */
+  flex-direction: column; /* Organizza gli elementi flex in colonna */
+  align-items: center; /* Centra gli elementi lungo l'asse trasversale */
+}
+.loading-wave-section h2 {
+  /* Selettore per l'elemento h2 all'interno di .loader-section */
+  color: rgb(58, 58, 58); /* Imposta il colore del testo */
+  margin-left: 5rem; /* Aggiunge un margine sinistro di 5rem */
+  font-size: 3rem; /* Imposta la dimensione del font a 3rem */
+  font-weight: normal; /* Imposta il peso del font a normale */
+  align-self: flex-start; /* Allinea l'elemento all'inizio dell'asse trasversale */
+}
+.loading-wave {
+  /* Selettore per la classe .loading-wave */
+  width: 300px; /* Imposta la larghezza a 300px */
+  height: 100px; /* Imposta l'altezza a 100px */
+  display: flex; /* Imposta il display come flex container */
+  justify-content: center; /* Centra gli elementi lungo l'asse principale */
+  align-items: flex-end; /* Allinea gli elementi al fondo dell'asse trasversale */
+}
+.loading-bar {
+  /* Selettore per la classe .loading-bar */
+  width: 20px; /* Imposta la larghezza a 20px */
+  height: 10px; /* Imposta l'altezza a 10px */
+  margin: 0 5px; /* Aggiunge un margine orizzontale di 5px */
+  background-image: linear-gradient(
+    /* Applica un gradiente lineare come sfondo */ to right,
+    var(--violet-color),
+    var(--blue-color)
+  );
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.7),
+    /* Ombra interna bianca leggera */ 0 0 5px rgba(255, 255, 255, 0.5),
+    /* Ombra esterna bianca leggera */ -1px 0 3px var(--violet-color),
+    /* Ombra esterna viola a sinistra */ 1px 0 3px var(--blue-color); /* Ombra esterna blu a destra */
+  border-radius: 5px; /* Imposta il raggio del bordo a 5px */
+  animation: loading-wave-animation 1s ease-in-out infinite; /* Applica l'animazione "loading-wave-animation" */
+}
+.loading-bar:nth-child(2) {
+  /* Selettore per il secondo elemento .loading-bar */
+  animation-delay: 0.1s; /* Ritarda l'animazione di 0.1 secondi */
+}
+.loading-bar:nth-child(3) {
+  /* Selettore per il terzo elemento .loading-bar */
+  animation-delay: 0.2s; /* Ritarda l'animazione di 0.2 secondi */
+}
+.loading-bar:nth-child(4) {
+  /* Selettore per il quarto elemento .loading-bar */
+  animation-delay: 0.3s; /* Ritarda l'animazione di 0.3 secondi */
+}
+@keyframes loading-wave-animation {
+  /* Definizione dell'animazione "loading-wave-animation" */
+  0% {
+    /* Stato iniziale dell'animazione */
+    height: 10px; /* Altezza iniziale a 10px */
+  }
+  50% {
+    /* Stato al 50% dell'animazione */
+    height: 50px; /* Altezza al 50% a 50px */
+  }
+  100% {
+    /* Stato finale dell'animazione */
+    height: 10px; /* Altezza finale a 10px */
+  }
+}
 /* FOOTER */
 footer {
   /* Selettore per l'elemento footer */
