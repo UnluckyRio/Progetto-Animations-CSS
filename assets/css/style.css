@@ -289,8 +289,8 @@ h1 span:nth-child(19) {
     transform: hue-rotate(360deg); /* Rotazione della tonalità di 360 gradi */
   }
 }
-/* LOADER SECTION */
-.loader-section {
+/* BAALLS LOADER SECTION */
+.balls-loader-section {
   /* Selettore per la classe .loader-section */
   border-bottom: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo inferiore solido */
   padding-bottom: 10em; /* Aggiunge un padding inferiore di 10em */
@@ -300,7 +300,7 @@ h1 span:nth-child(19) {
   flex-direction: column; /* Organizza gli elementi flex in colonna */
   align-items: center; /* Centra gli elementi lungo l'asse trasversale */
 }
-.loader-section h2 {
+.balls-loader-section h2 {
   /* Selettore per l'elemento h2 all'interno di .loader-section */
   color: rgb(58, 58, 58); /* Imposta il colore del testo */
   margin-left: 5rem; /* Aggiunge un margine sinistro di 5rem */
@@ -416,6 +416,283 @@ h1 span:nth-child(19) {
     opacity: 0.4; /* Opacità finale */
   }
 }
+/* BALLS LOADER SECTION */
+.box-loader-section {
+  /* Selettore per la classe .loader-section */
+  border-bottom: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo inferiore solido */
+  padding-bottom: 10em; /* Aggiunge un padding inferiore di 10em */
+  width: 100%; /* Imposta la larghezza al 100% */
+  box-sizing: border-box; /* Include padding e bordo nella larghezza e altezza totali */
+  display: flex; /* Imposta il display come flex container */
+  flex-direction: column; /* Organizza gli elementi flex in colonna */
+  align-items: center; /* Centra gli elementi lungo l'asse trasversale */
+}
+.box-loader-section h2 {
+  /* Selettore per l'elemento h2 all'interno di .loader-section */
+  color: rgb(58, 58, 58); /* Imposta il colore del testo */
+  margin-left: 5rem; /* Aggiunge un margine sinistro di 5rem */
+  font-size: 3rem; /* Imposta la dimensione del font a 3rem */
+  font-weight: normal; /* Imposta il peso del font a normale */
+  align-self: flex-start; /* Allinea l'elemento all'inizio dell'asse trasversale */
+}
+.box-loader {
+  /* Selettore per la classe .box-loader */
+  width: 48px; /* Imposta la larghezza a 48px */
+  height: 48px; /* Imposta l'altezza a 48px */
+  margin: auto; /* Centra l'elemento orizzontalmente */
+  position: relative; /* Imposta il posizionamento relativo */
+}
+.box-loader:before {
+  /* Selettore per lo pseudo-elemento ::before di .box-loader */
+  content: ""; /* Imposta il contenuto vuoto */
+  width: 48px; /* Imposta la larghezza a 48px */
+  height: 5px; /* Imposta l'altezza a 5px */
+  box-shadow: inset 0 0 10px white, inset 5px 0 15px var(--violet-color),
+    /* Applica ombre interne ed esterne */ inset -5px 0 15px var(--blue-color),
+    0 0 10px white, -3px 0 15px var(--violet-color),
+    3px 0 15px var(--blue-color);
+  background-color: transparent; /* Imposta il colore di sfondo trasparente */
+  position: absolute; /* Imposta il posizionamento assoluto */
+  top: 60px; /* Posiziona a 60px dal top */
+  left: 0; /* Posiziona a 0px da sinistra */
+  border-radius: 50%; /* Rende l'elemento circolare */
+  animation: shadow324 0.5s linear infinite; /* Applica l'animazione "shadow324" */
+}
+.box-loader:after {
+  /* Selettore per lo pseudo-elemento ::after di .box-loader */
+  content: ""; /* Imposta il contenuto vuoto */
+  width: 100%; /* Imposta la larghezza al 100% */
+  height: 100%; /* Imposta l'altezza al 100% */
+  background: radial-gradient(
+    /* Applica un gradiente radiale */ circle at center,
+    rgba(255, 255, 255, 0.9) 0%,
+    /* Bianco più dominante, leggermente trasparente */ rgba(239, 159, 255, 0.5)
+      45%,
+    /* Violetto con 50% di opacità */ rgba(147, 255, 255, 0.4) 85%
+      /* Ciano con 40% di opacità */
+  );
+  position: absolute; /* Imposta il posizionamento assoluto */
+  top: 0; /* Posiziona a 0px dal top */
+  left: 0; /* Posiziona a 0px da sinistra */
+  border-radius: 4px; /* Imposta il raggio del bordo a 4px */
+  animation: jump7456 0.5s linear infinite; /* Applica l'animazione "jump7456" */
+}
+@keyframes jump7456 {
+  /* Definizione dell'animazione "jump7456" */
+  15% {
+    /* Stato al 15% dell'animazione */
+    border-bottom-right-radius: 3px; /* Imposta il raggio del bordo inferiore destro */
+  }
+  25% {
+    /* Stato al 25% dell'animazione */
+    transform: translateY(9px) rotate(22.5deg); /* Traslazione verticale e rotazione */
+  }
+  50% {
+    /* Stato al 50% dell'animazione */
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg); /* Traslazione, scala e rotazione */
+    border-bottom-right-radius: 40px; /* Imposta il raggio del bordo inferiore destro */
+  }
+  75% {
+    /* Stato al 75% dell'animazione */
+    transform: translateY(9px) rotate(67.5deg); /* Traslazione verticale e rotazione */
+  }
+  100% {
+    /* Stato finale dell'animazione */
+    transform: translateY(0) rotate(90deg); /* Traslazione verticale e rotazione finale */
+  }
+}
+@keyframes shadow324 {
+  /* Definizione dell'animazione "shadow324" */
+  0%,
+  100% {
+    /* Stato iniziale e finale dell'animazione */
+    transform: scale(1, 1); /* Scala orizzontale e verticale */
+  }
+  50% {
+    /* Stato al 50% dell'animazione */
+    transform: scale(1.2, 1); /* Scala orizzontale */
+  }
+}
+/* MAGIC CARD */
+.card-section {
+  /* Selettore per la classe .loader-section */
+  border-bottom: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo inferiore solido */
+  padding-bottom: 10em; /* Aggiunge un padding inferiore di 10em */
+  width: 100%; /* Imposta la larghezza al 100% */
+  box-sizing: border-box; /* Include padding e bordo nella larghezza e altezza totali */
+  display: flex; /* Imposta il display come flex container */
+  flex-direction: column; /* Organizza gli elementi flex in colonna */
+  align-items: center; /* Centra gli elementi lungo l'asse trasversale */
+}
+.card-section h2 {
+  /* Selettore per l'elemento h2 all'interno di .loader-section */
+  color: rgb(58, 58, 58); /* Imposta il colore del testo */
+  margin-left: 5rem; /* Aggiunge un margine sinistro di 5rem */
+  font-size: 3rem; /* Imposta la dimensione del font a 3rem */
+  font-weight: normal; /* Imposta il peso del font a normale */
+  align-self: flex-start; /* Allinea l'elemento all'inizio dell'asse trasversale */
+}
+.card {
+  /* Selettore per la classe .card */
+  --background: linear-gradient(
+    /* Definisce una variabile CSS per il gradiente di sfondo */ to left,
+    var(--blue-color) 0%,
+    var(--violet-color) 100%
+  );
+  width: 190px; /* Imposta la larghezza a 190px */
+  height: 254px; /* Imposta l'altezza a 254px */
+  padding: 5px; /* Aggiunge un padding di 5px */
+  border-radius: 1rem; /* Imposta il raggio del bordo a 1rem */
+  overflow: visible; /* Permette al contenuto di fuoriuscire dal bordo */
+  background: white; /* Imposta il colore di sfondo a bianco */
+  background: var(--background); /* Applica il gradiente di sfondo definito */
+  position: relative; /* Imposta il posizionamento relativo */
+  z-index: 1; /* Imposta l'ordine di sovrapposizione */
+}
+.card::after {
+  /* Selettore per lo pseudo-elemento ::after di .card */
+  position: absolute; /* Imposta il posizionamento assoluto */
+  content: ""; /* Imposta il contenuto vuoto */
+  top: 30px; /* Posiziona a 30px dal top */
+  left: 0; /* Posiziona a 0px da sinistra */
+  right: 0; /* Posiziona a 0px da destra */
+  z-index: -1; /* Imposta l'ordine di sovrapposizione dietro agli altri elementi */
+  height: 100%; /* Imposta l'altezza al 100% */
+  width: 100%; /* Imposta la larghezza al 100% */
+  transform: scale(0.8); /* Ridimensiona l'elemento */
+  filter: blur(25px); /* Applica un filtro di sfocatura */
+  background: white; /* Imposta il colore di sfondo a bianco */
+  background: var(--background); /* Applica il gradiente di sfondo definito */
+  transition: opacity 0.5s; /* Applica una transizione all'opacità */
+}
+.card-info {
+  /* Selettore per la classe .card-info */
+  --color: #181818; /* Definisce una variabile CSS per il colore del testo */
+  background: var(--color); /* Imposta il colore di sfondo */
+  color: var(--color); /* Imposta il colore del testo */
+  display: flex; /* Imposta il display come flex container */
+  justify-content: center; /* Centra gli elementi lungo l'asse principale */
+  align-items: center; /* Centra gli elementi lungo l'asse trasversale */
+  width: 100%; /* Imposta la larghezza al 100% */
+  height: 100%; /* Imposta l'altezza al 100% */
+  overflow: visible; /* Permette al contenuto di fuoriuscire dal bordo */
+  border-radius: 0.7rem; /* Imposta il raggio del bordo a 0.7rem */
+}
+.card .title {
+  /* Selettore per l'elemento .title all'interno di .card */
+  font-weight: bold; /* Imposta il peso del font a grassetto */
+  letter-spacing: 0.1em; /* Imposta la spaziatura tra le lettere */
+}
+.card:hover::after {
+  /* Selettore per lo pseudo-elemento ::after di .card al passaggio del mouse */
+  opacity: 0; /* Imposta l'opacità a 0 */
+}
+.card:hover .card-info {
+  /* Selettore per l'elemento .card-info all'interno di .card al passaggio del mouse */
+  color: white; /* Imposta il colore del testo a bianco */
+  transition: color 1s; /* Applica una transizione al colore del testo */
+}
+/* HOLE */
+.hole-section {
+  /* Selettore per la classe .loader-section */
+  border-bottom: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo inferiore solido */
+  padding-bottom: 10em; /* Aggiunge un padding inferiore di 10em */
+  width: 100%; /* Imposta la larghezza al 100% */
+  box-sizing: border-box; /* Include padding e bordo nella larghezza e altezza totali */
+  display: flex; /* Imposta il display come flex container */
+  flex-direction: column; /* Organizza gli elementi flex in colonna */
+  align-items: center; /* Centra gli elementi lungo l'asse trasversale */
+  background-color: rgb(58, 58, 58);
+}
+.hole-section h2 {
+  /* Selettore per l'elemento h2 all'interno di .loader-section */
+  color: rgb(200, 200, 200); /* Imposta il colore del testo */
+  margin-left: 5rem; /* Aggiunge un margine sinistro di 5rem */
+  font-size: 3rem; /* Imposta la dimensione del font a 3rem */
+  font-weight: normal; /* Imposta il peso del font a normale */
+  align-self: flex-start; /* Allinea l'elemento all'inizio dell'asse trasversale */
+}
+.hole {
+  /* Selettore per la classe .hole */
+  display: flex; /* Imposta il display come flex container */
+  align-items: center; /* Centra gli elementi lungo l'asse trasversale */
+  justify-content: center; /* Centra gli elementi lungo l'asse principale */
+}
+i {
+  /* Selettore per l'elemento <i> */
+  display: block; /* Imposta il display come blocco */
+  position: absolute; /* Imposta il posizionamento assoluto */
+  width: 50px; /* Imposta la larghezza a 50px */
+  height: 50px; /* Imposta l'altezza a 50px */
+  border-radius: 140px; /* Imposta il raggio del bordo a 140px */
+  opacity: 0; /* Imposta l'opacità a 0 */
+  animation-name: scale; /* Specifica il nome dell'animazione */
+  animation-duration: 3s; /* Imposta la durata dell'animazione a 3 secondi */
+  animation-iteration-count: infinite; /* Imposta l'animazione per ripetersi infinitamente */
+  animation-timing-function: linear; /* Imposta la funzione di temporizzazione dell'animazione a lineare */
+}
+i:nth-child(1) {
+  /* Selettore per il primo elemento <i> */
+  animation-delay: 0.3s; /* Ritarda l'animazione di 0.3 secondi */
+}
+i:nth-child(2) {
+  /* Selettore per il secondo elemento <i> */
+  animation-delay: 0.6s; /* Ritarda l'animazione di 0.6 secondi */
+}
+i:nth-child(3) {
+  /* Selettore per il terzo elemento <i> */
+  animation-delay: 0.9s; /* Ritarda l'animazione di 0.9 secondi */
+}
+i:nth-child(4) {
+  /* Selettore per il quarto elemento <i> */
+  animation-delay: 1.2s; /* Ritarda l'animazione di 1.2 secondi */
+}
+i:nth-child(5) {
+  /* Selettore per il quinto elemento <i> */
+  animation-delay: 1.5s; /* Ritarda l'animazione di 1.5 secondi */
+}
+i:nth-child(6) {
+  /* Selettore per il sesto elemento <i> */
+  animation-delay: 1.8s; /* Ritarda l'animazione di 1.8 secondi */
+}
+i:nth-child(7) {
+  /* Selettore per il settimo elemento <i> */
+  animation-delay: 2.1s; /* Ritarda l'animazione di 2.1 secondi */
+}
+i:nth-child(8) {
+  /* Selettore per l'ottavo elemento <i> */
+  animation-delay: 2.4s; /* Ritarda l'animazione di 2.4 secondi */
+}
+i:nth-child(9) {
+  /* Selettore per il nono elemento <i> */
+  animation-delay: 2.7s; /* Ritarda l'animazione di 2.7 secondi */
+}
+i:nth-child(10) {
+  /* Selettore per il decimo elemento <i> */
+  animation-delay: 3s; /* Ritarda l'animazione di 3 secondi */
+}
+@keyframes scale {
+  /* Definizione dell'animazione "scale" */
+  0% {
+    /* Stato iniziale dell'animazione */
+    transform: scale(2); /* Scala l'elemento a 2 volte la sua dimensione */
+    opacity: 0; /* Imposta l'opacità a 0 */
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.5); /* Aggiunge un'ombra alla scatola */
+  }
+  50% {
+    /* Stato al 50% dell'animazione */
+    transform: scale(1) translate(0px, -5px); /* Scala l'elemento e lo trasla */
+    opacity: 1; /* Imposta l'opacità a 1 */
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5); /* Aggiunge un'ombra alla scatola */
+  }
+  100% {
+    /* Stato finale dell'animazione */
+    transform: scale(0.1) translate(0px, 5px); /* Scala l'elemento e lo trasla */
+    opacity: 0; /* Imposta l'opacità a 0 */
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0); /* Aggiunge un'ombra alla scatola */
+  }
+}
+
 /* FOOTER */
 footer {
   /* Selettore per l'elemento footer */
