@@ -763,6 +763,92 @@ i:nth-child(10) {
     height: 10px; /* Altezza finale a 10px */
   }
 }
+/* BUTTON NEON */
+.button-neon-section {
+  /* Selettore per la classe .orb-section */
+  border-top: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo superiore solido */
+  border-bottom: solid 2px rgb(58, 58, 58); /* Aggiunge un bordo inferiore solido */
+  padding-bottom: 10em; /* Aggiunge un padding inferiore di 10em */
+  width: 100%; /* Imposta la larghezza al 100% */
+  box-sizing: border-box; /* Include padding e bordo nella larghezza e altezza totali */
+  background-color: rgb(58, 58, 58);
+  text-align: center; /* Questo centrerà tutti gli elementi inline/inline-block al suo interno */
+}
+.button-neon-section h2 {
+  /* Selettore per l'elemento h2 all'interno di .orb-section */
+  color: rgb(200, 200, 200); /* Imposta il colore del testo */
+  margin-left: 5rem; /* Aggiunge un margine sinistro di 5rem */
+  font-size: 3rem; /* Imposta la dimensione del font a 3rem */
+  font-weight: normal; /* Imposta il peso del font a normale */
+  text-align: left; /* Assicura che l'h2 non sia influenzato dal text-align: center del genitore */
+}
+button {
+  --glow-color: rgb(
+    255,
+    255,
+    255
+  ); /* Bianco, come le ombre interne ed esterne dell'orb */
+  --glow-spread-color: rgba(
+    138,
+    43,
+    226,
+    0.7
+  ); /* Un viola leggermente più trasparente, basato su --violet-color */
+  --enhanced-glow-color: rgb(255, 255, 255); /* Bianco più intenso */
+  --btn-color: rgb(
+    58,
+    58,
+    58
+  ); /* Colore del bottone, puoi pensare a un grigio scuro o un colore scuro che stia bene */
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    /* Ombra esterna bianca */ 0 0 4em 1em var(--glow-spread-color),
+    /* Ombra esterna viola */ -0.5em 0 4em 1em var(--blue-color),
+    /* Ombra esterna blu (aggiunto per bilanciare) */ inset 0 0 0.75em 0.25em
+      var(--glow-color),
+    /* Ombra interna bianca */ inset 0.5em 0 1em 0.25em var(--violet-color),
+    /* Ombra interna viola */ inset -0.5em 0 1em 0.25em var(--blue-color); /* Ombra interna blu */
+  position: relative;
+  transition: all 0.3s;
+}
+.button-neon::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+.button-neon:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    /* Aumento della diffusione del glow viola */ -0.5em 0 4em 2em var(--blue-color),
+    /* Aumento della diffusione del glow blu */ inset 0 0 0.75em 0.25em
+      var(--glow-color),
+    inset 0.5em 0 1em 0.25em var(--violet-color),
+    inset -0.5em 0 1em 0.25em var(--blue-color);
+}
+.button-neon:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color), -0.5em 0 2.5em 2em var(--blue-color),
+    inset 0 0 0.5em 0.25em var(--glow-color),
+    inset 0.5em 0 0.75em 0.25em var(--violet-color),
+    inset -0.5em 0 0.75em 0.25em var(--blue-color);
+}
 /* FOOTER */
 footer {
   /* Selettore per l'elemento footer */
